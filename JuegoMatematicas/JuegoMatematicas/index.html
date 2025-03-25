@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escape Matemático - Juego Educativo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    [data-animate].active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .logo {
+      animation: bounceIn 1.2s ease-in-out;
+    }
+
+    header h1 {
+      animation: fadeInDown 1.5s ease-in-out;
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="fixed-header" data-animate>
+    <div class="container header-content">
+      <img src="assets/logo.png" alt="Logo Math Galaxy" class="logo" />
+      <h1>Escape Matemático</h1>
+      <nav>
+        <ul>
+          <li><a href="#game">Jugar</a></li>
+          <li><a href="#info">Información</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+          <li><a href="#gallery">Galería</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="game" class="section" data-animate>
+      <div class="container">
+        <h2>🌟 Demostración del Juego</h2>
+        <div id="game-box">
+          <div id="question-box">
+            <span id="question">Presiona "Comenzar" para iniciar</span>
+          </div>
+          <div id="options">
+            <button class="option-btn">A</button>
+            <button class="option-btn">B</button>
+            <button class="option-btn">C</button>
+            <button class="option-btn">D</button>
+          </div>
+          <div id="feedback"></div>
+          <button id="start-btn">Comenzar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="section alt-bg" data-animate>
+      <div class="container">
+        <h2>ℹ️ Información</h2>
+        <p><strong>Escape Matemático</strong> es una aplicación móvil desarrollada en Godot Engine, pensada para que los niños refuercen habilidades matemáticas de forma divertida e intuitiva. Esta página web está diseñada como un espacio informativo sobre la aplicación.</p>
+        <ul>
+          <li><strong>Nombre:</strong> Escape Matemático</li>
+          <li><strong>Plataforma:</strong> Android</li>
+          <li><strong>Edad recomendada:</strong> 6 a 12 años</li>
+          <li><strong>Funciones:</strong> Juegos de suma, resta, multiplicación, división, niveles adaptativos, y recompensas visuales.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq" class="section" data-animate>
+      <div class="container">
+        <h2>❓ Preguntas Frecuentes</h2>
+        <details>
+          <summary>¿Escape Matemático está disponible en iOS?</summary>
+          <p>Por el momento, la aplicación está disponible únicamente para dispositivos Android.</p>
+        </details>
+        <details>
+          <summary>¿Requiere conexión a Internet?</summary>
+          <p>No, la aplicación funciona completamente offline.</p>
+        </details>
+        <details>
+          <summary>¿Tiene anuncios?</summary>
+          <p>No, Escape Matemático está libre de anuncios y es completamente segura para niños.</p>
+        </details>
+        <details>
+          <summary>¿Dónde puedo descargarla?</summary>
+          <p>Pronto estará disponible en Google Play Store. Mientras tanto, puedes solicitar acceso anticipado vía correo electrónico.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="gallery" class="section alt-bg" data-animate>
+      <div class="container">
+        <h2>🖼️ Galería</h2>
+        <div class="gallery">
+          <div class="carousel">
+            <img src="imagenes/imagen1.jpg" alt="Captura del juego 1" />
+            <img src="imagenes/imagen2.jpg" alt="Captura del juego 2" />
+            <img src="imagenes/imagen3.jpg" alt="Captura del juego 3" />
+            <img src="imagenes/imagen4.jpg" alt="Captura del juego 4" />
+            <img src="imagenes/imagen5.jpg" alt="Captura del juego 5" />
+            <img src="imagenes/imagen6.jpg" alt="Captura del juego 6" />
+            <img src="imagenes/imagen7.jpg" alt="Captura del juego 7" />
+            <img src="imagenes/imagen8.jpg" alt="Captura del juego 8" />
+            <img src="imagenes/imagen9.jpg" alt="Captura del juego 9" />
+        
+          </div>
+        </div>
+        <div class="download-buttons">
+          <a href="#" title="Próximamente en Google Play">📱 Descargar para Android</a>
+          <a href="mailto:mathgalaxy@educa.com?subject=Acceso%20anticipado">🧪 Solicitar acceso anticipado</a>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="contact" class="section" data-animate>
+      <div class="container">
+        <h2>📧 Contacto</h2>
+        <p>¿Tienes sugerencias o deseas colaborar con el proyecto? Escríbenos:</p>
+        <p><a href=>escapematematico25@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Escape Matemático. Hecho con ❤️ para mentes brillantes.</p>
+    </div>
+  </footer>
+
+  <script>
+    const animatedSections = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    animatedSections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+
+</html>

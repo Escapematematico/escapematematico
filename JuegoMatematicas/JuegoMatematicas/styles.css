@@ -1,0 +1,255 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Fredoka One', cursive;
+    background: linear-gradient(to bottom, #e0f7fa, #fff);
+    color: #333;
+    scroll-behavior: smooth;
+    padding-top: 100px; /* compensar header fijo */
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #1976d2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #0d47a1;
+  }
+  
+  header {
+    padding: 20px 0;
+    color: white;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  header h1 {
+    font-size: 2.2em;
+    margin-left: 15px;
+    color: #fff59d;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffeb3b;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .alt-bg {
+    background-color: #f1f8e9;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #1976d2;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  #game-box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  #question-box {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .option-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1.2em;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .option-btn:hover {
+    background-color: #388e3c;
+    transform: scale(1.03);
+  }
+  
+  #start-btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  #start-btn:hover {
+    background-color: #f57c00;
+    transform: scale(1.05);
+  }
+  
+  #feedback {
+    font-size: 1.1em;
+    margin-top: 15px;
+    height: 24px;
+    color: #e91e63;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+  }
+  
+  details {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  details summary {
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  
+  details[open] {
+    border-left: 5px solid #1976d2;
+    background-color: #e3f2fd;
+  }
+  
+.gallery {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  gap: 20px; 
+  padding: 20px;
+}
+
+.gallery img {
+  width: calc(33.33% - 20px); 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease; 
+}
+
+.gallery img:hover {
+  transform: scale(1.05); 
+}
+
+@media (max-width: 768px) {
+  .gallery img {
+    width: calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery img {
+    width: 100%; 
+  }
+}
+
+  
+  .download-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 15px;
+  }
+  
+  .download-buttons a {
+    background-color: #1976d2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-buttons a:hover {
+    background-color: #0d47a1;
+  }
+  
+  footer {
+    background-color: #0d47a1;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+    }
+  
+    header h1 {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  
+    .gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .download-buttons {
+      flex-direction: column;
+    }
+  }
